@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS </title>
+</head>
+<body>
+     <header>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="networking.html">Networking</a> |
+      <a href="frontend.html">Frontend</a> |
+      <a href="backend.html">Node.js Backend</a> |
+      <a href="spring-backend.html">Spring Backend</a> |
+      <a href="system-design.html">System Design</a>
+    </nav>
+  </header>
+  <marquee behavior="scroll" direction="left" scrollamount="10" scrolldelay="20">
+   <h1>📘 My CSS Learning Journey</h1>
+  </marquee>
+    <!-- Header with navigation -->
+    <header>
+        
+        <nav>
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#intro">🎯 Introduction to CSS</a></li>
+                <li><a href="#syntax">📝 CSS Syntax</a></li>
+                <li><a href="#selectors">🔍 CSS Selectors</a></li>
+                <li><a href="#colors">🎨 Working with Colors</a></li>
+                <li><a href="#types">🔄 Types of CSS</a></li>
+                <li><a href="#box-model">📦 Box Model</a></li>
+                <li><a href="#positioning">📍 Positioning</a></li>
+                <li><a href="#flexbox">📏 Flexbox</a></li>
+                <li><a href="#lec"><b>🔄Video lecture</b></a></li>
+                <li><a href="#css-resources">Other Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <article id="intro">
+            <h2>🎯 What is CSS?</h2>
+            <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML. It controls how elements are displayed on web pages, including their layout, colors, fonts, and more.</p>
+            
+            <h3>Why Use CSS?</h3>
+            <p>CSS is used to separate content from presentation, which provides greater flexibility and control in the specification of presentation characteristics. It enables multiple web pages to share formatting and reduces complexity and repetition in structural content.</p>
+            
+            <!-- CSS Logo Representation -->
+            
+        </article>
+
+        <!-- Syntax Section -->
+        <article id="syntax">
+            <h2>📝 CSS Syntax</h2>
+            <p>CSS consists of style rules that are interpreted by the browser and applied to the corresponding elements.</p>
+            
+            <h3>Basic CSS Syntax Structure</h3>
+            <pre>
+selector {
+    property: value;
+    property: value;
+}
+            </pre>
+            
+            <h3>Example:</h3>
+            <pre>
+p {
+    color: blue;
+    font-size: 16px;
+}
+            </pre>
+            <p>In this example, all paragraph elements will have blue text with a font size of 16 pixels.</p>
+            
+            <!-- Syntax Visual -->
+            <pre>
+  <img src="img_selector syn.gif" alt="">
+            </pre>
+        </article>
+
+        <!-- Selectors Section -->
+        <article id="selectors">
+            <h2>🔍 CSS Selectors</h2>
+            <p>CSS selectors are patterns used to select the element(s) you want to style.</p>
+            
+            <h3>Basic Selectors</h3>
+            <ul>
+                <li><strong>Element selector:</strong> Selects elements based on the element name (e.g., p, div, h1)</li>
+                <li><strong>Class selector:</strong> Selects elements with a specific class attribute (e.g., .my-class)</li>
+                <li><strong>ID selector:</strong> Selects a single element with a specific id attribute (e.g., #my-id)</li>
+                <li><strong>Universal selector:</strong> Selects all elements (*)</li>
+            </ul>
+            
+            <!-- Selector Visual -->
+            <pre>
+<img src="CSS-Selectors.png" alt="selector" width="600px">
+            </pre>
+        </article>
+
+        <!-- Colors Section -->
+        <article id="colors">
+            <h2>🎨 Working with Colors in CSS</h2>
+            <p>CSS provides several ways to specify colors, each with its own use cases and advantages.</p>
+            
+            <h3>Color Representation Methods</h3>
+            <ul>
+                <li><strong>Named colors:</strong> Predefined color names (e.g., red, blue, green)</li>
+                <li><strong>Hexadecimal colors:</strong> Six-digit codes representing RGB values (e.g., #FF0000 for red)</li>
+                <li><strong>RGB:</strong> Functional notation using red, green, blue values (e.g., rgb(255, 0, 0))</li>
+                <li><strong>RGBA:</strong> RGB with alpha channel for transparency (e.g., rgba(255, 0, 0, 0.5))</li>
+                <li><strong>HSL:</strong> Hue, Saturation, Lightness model (e.g., hsl(0, 100%, 50%))</li>
+                <li><strong>HSLA:</strong> HSL with alpha channel for transparency</li>
+            </ul>
+            
+            
+        </article>
+
+        <!-- Types of CSS Section -->
+        <article id="types">
+            <h2>🔄 Types of CSS</h2>
+            <p>There are three ways to apply CSS to HTML documents, each with different use cases and levels of specificity.</p>
+            
+            <h3>Inline CSS</h3>
+            <p>Applied directly to HTML elements using the style attribute. Has the highest specificity.</p>
+            <pre>
+&lt;p style="color: blue; font-size: 16px;"&gt;This is a paragraph with inline styles.&lt;/p&gt;
+            </pre>
+            
+            <h3>Internal CSS</h3>
+            <p>Defined within the &lt;style&gt; tags in the &lt;head&gt; section of an HTML document. Applies to the entire document.</p>
+            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+            </pre>
+            
+            <h3>External CSS</h3>
+            <p>Defined in a separate .css file and linked to the HTML document using the &lt;link&gt; tag. Most efficient method for styling multiple pages.</p>
+            <pre>
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+            </pre>
+            
+            <!-- CSS Types Visual -->
+            
+        </article>
+
+        <!-- Box Model Section -->
+        <article id="box-model">
+            <h2>📦 CSS Box Model</h2>
+            <p>The CSS box model describes the rectangular boxes generated for elements in the document tree. Each box has content, padding, border, and margin areas.</p>
+            
+            <!-- Box Model Visual -->
+            <pre>
+<img src="image.png" alt="box-model" width="500px">
+            </pre>
+            
+            <h3>Box Model Components</h3>
+            <ul>
+                <li><strong>Content:</strong> The actual content of the box, where text and images appear</li>
+                <li><strong>Padding:</strong> Clears an area around the content; transparent</li>
+                <li><strong>Border:</strong> A border that goes around the padding and content</li>
+                <li><strong>Margin:</strong> Clears an area outside the border; transparent</li>
+            </ul>
+            
+            <h3>Box-Sizing Property</h3>
+            <p>The box-sizing property controls how the total width and height of an element is calculated.</p>
+            <ul>
+                <li><strong>content-box:</strong> Default. Width and height only apply to the content</li>
+                <li><strong>border-box:</strong> Width and height apply to content, padding, and border</li>
+            </ul>
+            
+            <!-- Box Sizing Visual -->
+            <pre>
+<img src="box-sizing.png" alt="box-sizing" width="600px">
+            </pre>
+        </article>
+
+        <!-- Positioning Section -->
+        <article id="positioning">
+            <h2>📍 CSS Positioning</h2>
+            <p>The position property specifies the type of positioning method used for an element.</p>
+            
+            <h3>Position Values</h3>
+            <ul>
+                <li><strong>static:</strong> Default. Elements are positioned according to the normal flow of the document</li>
+                <li><strong>relative:</strong> Positioned relative to its normal position</li>
+                <li><strong>absolute:</strong> Positioned relative to the nearest positioned ancestor</li>
+                <li><strong>fixed:</strong> Positioned relative to the browser window</li>
+                <li><strong>sticky:</strong> Toggles between relative and fixed based on scroll position</li>
+            </ul>
+            
+            <!-- Positioning Visual -->
+            <pre>
+<img src="pos.jpeg" alt="position" width="500px">
+            </pre>
+        </article>
+
+        <!-- Flexbox Section -->
+        <article id="flexbox">
+            <h2>📏 CSS Flexbox</h2>
+            <p>Flexbox is a CSS layout module that makes it easier to design flexible and responsive layout structures.</p>
+            
+            <!-- Flexbox Visual -->
+            <pre>
+<img src="flexbox-basics.png" alt="flex" width="700px">
+            </pre>
+            
+            <h3>Why Use Flexbox?</h3>
+            <ul>
+                <li>Easier alignment of elements</li>
+                <li>Distribute space dynamically between elements</li>
+                <li>Handle different screen sizes and display devices</li>
+                <li>Simplify complex layouts</li>
+            </ul>
+            
+            <h3>Flex Container Properties</h3>
+            <p>These properties are applied to the parent element (flex container):</p>
+            <ul>
+                <li><strong>display:</strong> Defines a flex container (flex or inline-flex)</li>
+                <li><strong>flex-direction:</strong> Defines the direction of flex items (row, row-reverse, column, column-reverse)</li>
+                <li><strong>flex-wrap:</strong> Specifies whether flex items should wrap (nowrap, wrap, wrap-reverse)</li>
+                <li><strong>justify-content:</strong> Aligns flex items along the main axis (flex-start, flex-end, center, space-between, space-around, space-evenly)</li>
+                <li><strong>align-items:</strong> Aligns flex items along the cross axis (stretch, flex-start, flex-end, center, baseline)</li>
+                <li><strong>align-content:</strong> Aligns flex lines when there is extra space in the cross axis (flex-start, flex-end, center, space-between, space-around, stretch)</li>
+            </ul>
+            
+            <!-- Flex Direction Visual -->
+            <pre>
+<img src="flex_terms.png" alt=" container" width="800px">
+            </pre>
+        </article>
+        <h2>📚 Rohit Negi Video Lectures</h2>
+        <marquee behavior="scroll" direction="left" scrollamount="10" scrolldelay="20">
+    <h3>🚀 Remaining data will be added here very soon ...... 'WAITING FOR NEGI BHAIYA' 🚀</h3>
+  </marquee>
+        <section id="lec">
+            <table border="5" cellpadding="5" cellspacing="20">
+            <tr>
+                <td>
+                    <a href="https://youtu.be/7rrUVevoECg?si=a3LC5gYRqwxrxzmc" target="_blank">
+                            <img src="https://i.ytimg.com/vi/7rrUVevoECg/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBmfBzA8pqYB_OP9h1QK0U6Ox2VFA" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+                </td>
+                <td>
+                    <a href="https://youtu.be/MluY-_FUxFI?si=c0Hk-MGqQUDIiZr6" target="_blank">
+                            <img src="https://i.ytimg.com/vi/MluY-_FUxFI/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBxvGrluwHoK6Pl7EU3RwEN_NDf0g" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+                </td>
+                <td>
+                    <a href="https://youtu.be/HwvOyrPDqhM?si=ZxLIXZVzSeVDTtjm" target="_blank">
+                            <img src="https://i.ytimg.com/vi/HwvOyrPDqhM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBxdew0_u8Bg7kX_PAIqnxV7jI9Ug" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://youtu.be/KD5mNp8PTko?si=HkCJs8ef8bl5KDiF" target="_blank">
+                            <img src="https://i.ytimg.com/vi/KD5mNp8PTko/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLComFByonfru7C57MU6ZgnPlQLVmQ" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+                </td>
+                <td>
+                    <a href="" target="_blank">
+                            <img src="" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+                </td>
+                <td>
+                    <a href="" target="_blank">
+                            <img src="" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+                </td>
+            </tr>
+        </table>
+        </section>
+        <section id="css-resources">
+    <h2>🎨 CSS Resources</h2>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Resource Type</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CSS Basics</td>
+                <td>Tutorial</td>
+                <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Docs</a></td>
+            </tr>
+            <tr>
+                <td>CSS Selectors</td>
+                <td>Guide</td>
+                <td><a href="https://www.w3schools.com/cssref/css_selectors.php" target="_blank">W3Schools Selectors</a></td>
+            </tr>
+            <tr>
+                <td>Flexbox</td>
+                <td>Interactive Game</td>
+                <td><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></td>
+            </tr>
+            <tr>
+                <td>Grid Layout</td>
+                <td>Interactive Game</td>
+                <td><a href="https://cssgridgarden.com/" target="_blank">Grid Garden</a></td>
+            </tr>
+            <tr>
+                <td>CSS Animations</td>
+                <td>Article</td>
+                <td><a href="https://css-tricks.com/almanac/properties/a/animation/" target="_blank">CSS Tricks Animation Guide</a></td>
+            </tr>
+            <tr>
+                <td>CSS Best Practices</td>
+                <td>Blog</td>
+                <td><a href="https://smacss.com/" target="_blank">SMACSS</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+        
+    </main>
+
+    <footer>
+        <hr>
+  <marquee behavior="scroll" direction="left" scrollamount="6" loop="infinite">
+    &copy; <b>2025 — Made with ❤️ by Suvajit</b>
+  </marquee>
+    </footer>
+  
+</body>
+</html>

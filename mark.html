@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML </title>
+</head>
+<body>
+    <!-- Header Section -->
+     <header>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="networking.html">Networking</a> |
+      <a href="frontend.html">Frontend</a> |
+      <a href="backend.html">Node.js Backend</a> |
+      <a href="spring-backend.html">Spring Backend</a> |
+      <a href="system-design.html">System Design</a>
+    </nav>
+  </header>
+    <header>
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            <h1>📚 Learn HTML in Modern Way with Rohit Negi 🌐</h1>
+        </marquee>
+        <nav>
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#what-is-html">What is HTML?</a></li>
+                <li><a href="#boilerplate">HTML Boilerplate</a></li>
+                <li><a href="#anchor-tag">Anchor Tag</a></li>
+                <li><a href="#image-tag">Image Tag</a></li>
+                <li><a href="#nested-lists">Nested Lists</a></li>
+                <li><a href="#tables">HTML Tables</a></li>
+                <li><a href="#file-paths">File Paths</a></li>
+                <li><a href="#div-class-id">Div, Class & ID</a></li>
+                <li><a href="#forms">HTML Forms</a></li>
+                <li><a href="#media">Media Tags</a></li>
+                <li><a href="#lec"> Video lectures</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- What is HTML Section -->
+        <section id="what-is-html">
+            <h2>🔍 What is HTML?</h2>
+            <p><strong>HTML (HyperText Markup Language)</strong> is the standard markup language for creating web pages. It describes the structure of a web page and consists of a series of elements that tell the browser how to display content.</p>
+            
+            <h3>Key Points about HTML:</h3>
+            <ul>
+                <li>HTML stands for HyperText Markup Language</li>
+                <li>HTML is the standard markup language for Web pages</li>
+                <li>HTML elements are the building blocks of HTML pages</li>
+                <li>HTML elements are represented by tags</li>
+                <li>HTML tags label pieces of content such as "heading", "paragraph", "table", etc.</li>
+                <li>Browsers do not display HTML tags but use them to render content</li>
+            </ul>
+            
+            <h3>Simple HTML Example:</h3>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </section>
+
+        <!-- HTML Boilerplate Section -->
+        <section id="boilerplate">
+            <h2>📄 HTML Boilerplate</h2>
+            <p>An HTML boilerplate is a template you will include at the beginning of your HTML projects. It contains the essential parts of an HTML document that you need to set up before adding your content.</p>
+            
+            <h3>Basic HTML5 Boilerplate:</h3>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            
+            <h3>Explanation of Boilerplate Elements:</h3>
+            <table border="1">
+                <tr>
+                    <th>Element</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>&lt;!DOCTYPE html&gt;</td>
+                    <td>Defines the document type and HTML version (HTML5)</td>
+                </tr>
+                <tr>
+                    <td>&lt;html lang="en"&gt;</td>
+                    <td>Root element with language specification</td>
+                </tr>
+                <tr>
+                    <td>&lt;head&gt;</td>
+                    <td>Contains meta information about the document</td>
+                </tr>
+                <tr>
+                    <td>&lt;meta charset="UTF-8"&gt;</td>
+                    <td>Defines character encoding for the document</td>
+                </tr>
+                <tr>
+                    <td>&lt;meta name="viewport"&gt;</td>
+                    <td>Ensures proper rendering and zooming on mobile devices</td>
+                </tr>
+                <tr>
+                    <td>&lt;title&gt;</td>
+                    <td>Specifies the title of the document (shown in browser tab)</td>
+                </tr>
+                <tr>
+                    <td>&lt;body&gt;</td>
+                    <td>Contains the visible page content</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Anchor Tag Section -->
+        <section id="anchor-tag">
+            <h2>🔗 Anchor Tag</h2>
+            <p>The HTML &lt;a&gt; tag (anchor tag) defines a hyperlink that is used to link from one page to another. The most important attribute of the &lt;a&gt; element is the <strong>href</strong> attribute, which indicates the link's destination.</p>
+            
+            <h3>Basic Syntax:</h3>
+            <pre>&lt;a href="url"&gt;link text&lt;/a&gt;</pre>
+            
+            <h3>Examples of Anchor Tags:</h3>
+            <ul>
+                <li>Link to an external website: <a href="https://www.example.com">Visit Example.com</a></li>
+                <li>Link to another page on the same site: <a href="about.html">About Us</a></li>
+                <li>Link to an email address: <a href="mailto:someone@example.com">Send Email</a></li>
+                <li>Link to a phone number: <a href="tel:+1234567890">Call Us</a></li>
+                <li>Link to a section on the same page: <a href="#what-is-html">Go to What is HTML</a></li>
+            </ul>
+            
+            <h3>Anchor Tag Attributes:</h3>
+            <table border="1">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>href</td>
+                    <td>Specifies the URL of the page the link goes to</td>
+                </tr>
+                <tr>
+                    <td>target</td>
+                    <td>Specifies where to open the linked document (_blank, _self, _parent, _top)</td>
+                </tr>
+                <tr>
+                    <td>download</td>
+                    <td>Specifies that the target will be downloaded when clicked</td>
+                </tr>
+                <tr>
+                    <td>rel</td>
+                    <td>Specifies the relationship between current and linked document</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Image Tag Section -->
+        <section id="image-tag">
+            <h2>🖼️ Image Tag</h2>
+            <p>The HTML &lt;img&gt; tag is used to embed an image in a web page. Images are not technically inserted into a web page; they are linked to web pages. The &lt;img&gt; tag creates a holding space for the referenced image.</p>
+            
+            <h3>Basic Syntax:</h3>
+            <pre>&lt;img src="image.jpg" alt="Description of image"&gt;</pre>
+            
+            <h3>Image Examples:</h3>
+            <p>Here's an example of an image (using placeholder):</p>
+            <img src="https://via.placeholder.com/300x150?text=Example+Image" alt="Example placeholder image">
+            
+            <h3>Image Tag Attributes:</h3>
+            <table border="1">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>Specifies the path to the image (required)</td>
+                </tr>
+                <tr>
+                    <td>alt</td>
+                    <td>Specifies an alternate text for the image (required for accessibility)</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td>Specifies the width of the image (in pixels or percentage)</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td>Specifies the height of the image (in pixels or percentage)</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Provides additional information about the image (shown as tooltip)</td>
+                </tr>
+            </table>
+            
+            <h3>Image as a Link:</h3>
+            <p>You can also use an image as a link by nesting it inside an anchor tag:</p>
+            <a href="https://youtu.be/GkZN_-HMCJ8?si=2EutLL-ChQ6axxU4" target="_blank">
+                            <img src="https://i.ytimg.com/vi/GkZN_-HMCJ8/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB079DUCpx_KxHOS9qEyeWv62oAQQ" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+        </section>
+
+        <!-- Nested Lists Section -->
+        <section id="nested-lists">
+            <h2>📋 Nested Lists in HTML</h2>
+            <p>HTML allows you to create nested lists (lists within lists) to represent hierarchical data.</p>
+            
+            <h3>Ordered List with Nested Unordered List:</h3>
+            <ol>
+                <li>First item
+                    <ul>
+                        <li>Nested unordered item 1</li>
+                        <li>Nested unordered item 2</li>
+                    </ul>
+                </li>
+                <li>Second item
+                    <ol>
+                        <li>Nested ordered item 1</li>
+                        <li>Nested ordered item 2</li>
+                    </ol>
+                </li>
+                <li>Third item</li>
+            </ol>
+            
+            <h3>Definition List:</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language - the standard markup language for web pages</dd>
+                
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets - used for styling web pages</dd>
+                
+                <dt>JavaScript</dt>
+                <dd>A programming language used to create interactive effects within web browsers</dd>
+            </dl>
+            
+            <h3>Code Example:</h3>
+            <pre>
+&lt;ul&gt;
+    &lt;li&gt;First item
+        &lt;ol&gt;
+            &lt;li&gt;Nested item 1&lt;/li&gt;
+            &lt;li&gt;Nested item 2&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+        </section>
+
+        <!-- Tables Section -->
+        <section id="tables">
+            <h2>📊 HTML Tables</h2>
+            <p>HTML tables allow you to arrange data into rows and columns.</p>
+            
+            <h3>Basic Table Structure:</h3>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>25</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>32</td>
+                    <td>Spain</td>
+                </tr>
+                <tr>
+                    <td>Chen</td>
+                    <td>28</td>
+                    <td>China</td>
+                </tr>
+            </table>
+            
+            <h3>Table with Header, Body and Footer:</h3>
+            <table border="1">
+                <caption>Employee Details</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>John Doe</td>
+                        <td>Marketing</td>
+                        <td>$5,000</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Jane Smith</td>
+                        <td>Sales</td>
+                        <td>$6,200</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Robert Johnson</td>
+                        <td>IT</td>
+                        <td>$7,500</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td>$18,700</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <h3>Table with Colspan and Rowspan:</h3>
+            <table border="1">
+                <tr>
+                    <th rowspan="2">Name</th>
+                    <th colspan="2">Contact</th>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                    <td>098-765-4321</td>
+                </tr>
+            </table>
+            
+            <h3>Table Code Example:</h3>
+            <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </section>
+
+        <!-- File Paths Section -->
+        <section id="file-paths">
+            <h2>📁 File Paths in HTML</h2>
+            <p>File paths describe the location of a file in a website's folder structure.</p>
+            
+            <h3>Types of File Paths:</h3>
+            <table border="1">
+                <tr>
+                    <th>Path Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Absolute Path</td>
+                    <td>Full URL to an external resource</td>
+                    <td>https://www.example.com/images/pic.jpg</td>
+                </tr>
+                <tr>
+                    <td>Relative Path</td>
+                    <td>Path relative to the current page</td>
+                    <td>images/pic.jpg or ../images/pic.jpg</td>
+                </tr>
+                <tr>
+                    <td>Root Relative Path</td>
+                    <td>Path relative to the root of the website</td>
+                    <td>/images/pic.jpg</td>
+                </tr>
+            </table>
+            
+            <h3>Relative Path Examples:</h3>
+            <ul>
+                <li><strong>src="image.jpg"</strong> - The image is located in the same folder as the current page</li>
+                <li><strong>src="images/image.jpg"</strong> - The image is located in the images folder in the current folder</li>
+                <li><strong>src="../image.jpg"</strong> - The image is located in the folder one level up from the current folder</li>
+                <li><strong>src="/images/image.jpg"</strong> - The image is located in the images folder at the root of the current web</li>
+            </ul>
+            
+            <h3>Path Examples in Code:</h3>
+            <pre>
+&lt;!-- Absolute path --&gt;
+&lt;img src="https://www.example.com/images/photo.jpg" alt="Example"&gt;
+
+&lt;!-- Relative path --&gt;
+&lt;img src="images/photo.jpg" alt="Example"&gt;
+
+&lt;!-- Relative path going up one level --&gt;
+&lt;img src="../images/photo.jpg" alt="Example"&gt;
+
+&lt;!-- Root relative path --&gt;
+&lt;img src="/images/photo.jpg" alt="Example"&gt;
+            </pre>
+        </section>
+
+        <!-- Div, Class and ID Section -->
+        <section id="div-class-id">
+            <h2>📦 Div, Class & ID in HTML</h2>
+            <p>These are important attributes used for styling and JavaScript manipulation of HTML elements.</p>
+            
+            <h3>The Div Element:</h3>
+            <p>The &lt;div&gt; tag defines a division or a section in an HTML document. It is used as a container for other HTML elements.</p>
+            <div style="border: 1px solid black; padding: 10px;">
+                <h4>This is a div element</h4>
+                <p>It can contain any other HTML elements</p>
+            </div>
+            
+            <h3>Class Attribute:</h3>
+            <p>The class attribute is used to specify one or more class names for an element. Classes can be used by CSS and JavaScript.</p>
+            <p class="highlight">This paragraph has a class="highlight"</p>
+            <p class="highlight important">This paragraph has two classes: class="highlight important"</p>
+            
+            <h3>ID Attribute:</h3>
+            <p>The id attribute specifies a unique id for an HTML element. The value must be unique within the HTML document.</p>
+            <p id="special-paragraph">This paragraph has a unique id="special-paragraph"</p>
+            
+            <h3>Code Examples:</h3>
+            <pre>
+&lt;!-- Div element --&gt;
+&lt;div&gt;
+    &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;p&gt;Some content here&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Class attribute --&gt;
+&lt;p class="highlight"&gt;This is highlighted text&lt;/p&gt;
+&lt;p class="highlight important"&gt;This is important highlighted text&lt;/p&gt;
+
+&lt;!-- ID attribute --&gt;
+&lt;div id="header"&gt;This is the header section&lt;/div&gt;
+&lt;p id="intro"&gt;Introduction paragraph&lt;/p&gt;
+            </pre>
+            
+            <h3>Differences Between Class and ID:</h3>
+            <table border="1">
+                <tr>
+                    <th>Class</th>
+                    <th>ID</th>
+                </tr>
+                <tr>
+                    <td>Can be used on multiple elements</td>
+                    <td>Must be unique to a single element</td>
+                </tr>
+                <tr>
+                    <td>Selected with .classname in CSS</td>
+                    <td>Selected with #idname in CSS</td>
+                </tr>
+                <tr>
+                    <td>An element can have multiple classes</td>
+                    <td>An element can have only one ID</td>
+                </tr>
+                <tr>
+                    <td>Used for styling groups of elements</td>
+                    <td>Used for unique styling and JavaScript manipulation</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Forms Section -->
+        <section id="forms">
+            <h2>📝 HTML Forms</h2>
+            <p>HTML forms are used to collect user input. A form contains input elements like text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+            
+            <h3>Basic Form Structure:</h3>
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+            
+            <h3>Advanced Form with All Input Types:</h3>
+            <form>
+                <fieldset>
+                    <legend>Advanced Form Example</legend>
+                    
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="120"><br><br>
+                    
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate"><br><br>
+                    
+                    <label for="favcolor">Favorite Color:</label>
+                    <input type="color" id="favcolor" name="favcolor"><br><br>
+                    
+                    <label for="website">Website:</label>
+                    <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+                    
+                    <label for="file">Upload File:</label>
+                    <input type="file" id="file" name="file"><br><br>
+                    
+                    <label for="range">Rate our service (0-10):</label>
+                    <input type="range" id="range" name="range" min="0" max="10"><br><br>
+                    
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" name="search"><br><br>
+                    
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label><br><br>
+                    
+                    <label>Interests:</label>
+                    <input type="checkbox" id="coding" name="interests" value="coding">
+                    <label for="coding">Coding</label>
+                    <input type="checkbox" id="design" name="interests" value="design">
+                    <label for="design">Design</label>
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label><br><br>
+                    
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">Select a country</option>
+                        <option value="usa">United States</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="australia">Australia</option>
+                        <option value="india">India</option>
+                    </select><br><br>
+                    
+                    <label for="cars">Choose a car:</label>
+                    <select id="cars" name="cars" size="3" multiple>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select><br><br>
+                    
+                    <label for="bio">Bio:</label><br>
+                    <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea><br><br>
+                    
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                    <button type="button">Just a Button</button>
+                </fieldset>
+            </form>
+            
+            <h3>Form Attributes:</h3>
+            <table border="1">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>action</td>
+                    <td>Specifies where to send the form-data when a form is submitted</td>
+                </tr>
+                <tr>
+                    <td>method</td>
+                    <td>Specifies the HTTP method to use when sending form-data (GET or POST)</td>
+                </tr>
+                <tr>
+                    <td>target</td>
+                    <td>Specifies where to display the response after submitting the form</td>
+                </tr>
+                <tr>
+                    <td>autocomplete</td>
+                    <td>Specifies whether a form should have autocomplete on or off</td>
+                </tr>
+                <tr>
+                    <td>novalidate</td>
+                    <td>Specifies that the form should not be validated when submitted</td>
+                </tr>
+            </table>
+            
+            <h3>Input Attributes:</h3>
+            <table border="1">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>Specifies the type of input element to display</td>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Specifies the name of an input element</td>
+                </tr>
+                <tr>
+                    <td>value</td>
+                    <td>Specifies the value of an input element</td>
+                </tr>
+                <tr>
+                    <td>required</td>
+                    <td>Specifies that an input field must be filled out before submitting the form</td>
+                </tr>
+                <tr>
+                    <td>placeholder</td>
+                    <td>Specifies a short hint that describes the expected value of an input field</td>
+                </tr>
+                <tr>
+                    <td>readonly</td>
+                    <td>Specifies that an input field is read-only</td>
+                </tr>
+                <tr>
+                    <td>disabled</td>
+                    <td>Specifies that an input field should be disabled</td>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td>Specifies the width (in characters) of an input field</td>
+                </tr>
+                <tr>
+                    <td>maxlength</td>
+                    <td>Specifies the maximum number of characters allowed in an input field</td>
+                </tr>
+                <tr>
+                    <td>min and max</td>
+                    <td>Specifies the minimum and maximum values for an input field</td>
+                </tr>
+                <tr>
+                    <td>pattern</td>
+                    <td>Specifies a regular expression that an input field's value is checked against</td>
+                </tr>
+            </table>
+            
+            <h3>Form Code Example:</h3>
+            <pre>
+&lt;form action="/submit-form" method="post"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Info&lt;/legend&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+        
+        &lt;input type="submit" value="Register"&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+            </pre>
+        </section>
+
+        <!-- Media Tags Section -->
+        <section id="media">
+            <h2>🎵 Media Tags in HTML</h2>
+            <p>HTML provides several tags for embedding multimedia content like audio, video, and external content from sites like YouTube.</p>
+            
+            <h3>Audio Element:</h3>
+            <p>The &lt;audio&gt; tag is used to embed sound content in a document.</p>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <h3>Video Element:</h3>
+            <p>The &lt;video&gt; tag is used to embed video content in a document.</p>
+            <video width="320" height="240" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+            
+            <h3>Embedding YouTube Videos:</h3>
+            <p>You can embed YouTube videos using the &lt;iframe&gt; tag.</p>
+            <iframe width="320" height="240" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <h3>Media Code Examples:</h3>
+            <pre>
+&lt;!-- Audio --&gt;
+&lt;audio controls&gt;
+    &lt;source src="audiofile.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+&lt;!-- Video --&gt;
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.ogg" type="video/ogg"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;!-- YouTube Video --&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+ encrypted-media; 
+allowfullscreen&gt;&lt;/iframe&gt;
+            </pre>
+            
+            <h3>Media Attributes:</h3>
+            <table border="1">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>controls</td>
+                    <td>Displays audio/video controls (play, pause, volume, etc.)</td>
+                </tr>
+                <tr>
+                    <td>autoplay</td>
+                    <td>Specifies that the audio/video will start playing as soon as it is ready</td>
+                </tr>
+                <tr>
+                    <td>loop</td>
+                    <td>Specifies that the audio/video will start over again, every time it is finished</td>
+                </tr>
+                <tr>
+                    <td>muted</td>
+                    <td>Specifies that the audio output of the video should be muted</td>
+                </tr>
+                <tr>
+                    <td>preload</td>
+                    <td>Specifies if and how the author thinks the video should be loaded when the page loads</td>
+                </tr>
+                <tr>
+                    <td>poster</td>
+                    <td>Specifies an image to be shown while the video is downloading, or until the user hits the play button</td>
+                </tr>
+            </table>
+        </section>
+        <section id="lec">
+    <h2>📚 Rohit Negi Video Lectures</h2>
+    <table border="5" cellpadding="5" cellspacing="20" >
+        <tr>
+            <td>
+                   
+                        <a href="https://youtu.be/GkZN_-HMCJ8?si=2EutLL-ChQ6axxU4" target="_blank">
+                            <img src="https://i.ytimg.com/vi/GkZN_-HMCJ8/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB079DUCpx_KxHOS9qEyeWv62oAQQ" 
+                                 alt="Video 1 Thumbnail" width="400">
+                        </a>
+                </td>
+                <td>
+                    <a href="https://youtu.be/AJ4E1zf5tQs?si=r-xIBO_0qD-3-F6G" target="_blank">
+                            <img src="https://i.ytimg.com/vi/AJ4E1zf5tQs/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCmWH8iFvFEFld5uX2_MsrhTjVNeg" 
+                                 alt="Video 2 Thumbnail" width="400">
+                        </a>
+                </td>
+                <td>
+                    <a href="https://youtu.be/k78lNSAB8VY?si=z-F0tn8EpdX7cJqg" target="_blank">
+                            <img src="https://i.ytimg.com/vi/k78lNSAB8VY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAWQrbOT3GJ11xM3pjrcc8Kbd5fSw" 
+                                 alt="Video 3 Thumbnail" width="400">
+                        </a>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://youtu.be/a4j9R_DvZ8M?si=L-zwBznDbUuAZh6B" target="_blank">
+                            <img src="https://i.ytimg.com/vi/a4j9R_DvZ8M/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAbJlwsEVOahZCeYKbRYQhGCrFnaw" 
+                                 alt="Video 4 Thumbnail" width="400">
+                        </a>
+            </td>
+            <td>
+                <a href="https://youtu.be/NGYp1zCBthk?si=Rf4p-yPvKmScPZ9g" target="_blank">
+                            <img src="https://i.ytimg.com/vi/NGYp1zCBthk/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLANqucx7z2UItOx3Tiph_eUklSQTA" 
+                                 alt="Video 5 Thumbnail" width="400">
+                        </a>
+            </td>
+        </tr>
+    </table>
+</section>
+
+    </main>
+
+    <footer>
+        <hr>
+  <marquee behavior="scroll" direction="left" scrollamount="6" loop="infinite">
+    &copy; <b>2025 — Made with ❤️ by Suvajit</b>
+  </marquee>
+    </footer>
+</body>
+</html>

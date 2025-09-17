@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking </title>
+</head>
+<body>
+    <header>
+        <marquee behavior="alternate" direction="left" scrollamount="3">
+            <h1>🌐 Networking Fundamentals - Learn How Internet Works! 🌐</h1>
+        </marquee>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="networking.html">Networking</a> |
+            <a href="frontend.html">Frontend</a> |
+            <a href="backend.html">Node.js Backend</a> |
+            <a href="spring-backend.html">Spring Backend</a> |
+            <a href="system-design.html">System Design</a>
+        </nav>
+
+        <section>
+            <ol>
+                <li><a href="#work">How Internet Works</a></li>
+                <li><a href="#ip">IP Adress</a></li>
+                <li><a href="#dns">DNS</a></li>
+                <li><a href="#com">Internet Communication Flow</a></li>
+                <li><a href="#lec">Video Lectures</a></li>
+                <li><a href="#res"> Other Resources</a></li>
+            </ol>
+        </section>
+    </header>
+
+    <main>
+        <section >
+            <h2>Understanding Web Networking</h2>
+            <p>Before diving into MERN stack development, it's crucial to understand how web applications communicate over the internet. This includes understanding how the internet works, IP addressing, and DNS resolution.</p>
+        </section>
+
+        <section id="work">
+            <h2>🌐 How the Internet Works</h2>
+            <h3>Basic Internet Architecture</h3>
+            <p>The internet is a global network of interconnected computers that communicate using standardized protocols. Here's how it works:</p>
+            <ul>
+                <li><strong>Client-Server Model:</strong> Your device (client) requests data from servers</li>
+                <li><strong>Packet Switching:</strong> Data is broken into small packets and sent across networks</li>
+                <li><strong>Routing:</strong> Packets travel through multiple routers to reach their destination</li>
+                <li><strong>Protocols:</strong> TCP/IP ensures reliable data transmission</li>
+            </ul>
+
+            <h3>Internet Infrastructure</h3>
+            <ul>
+                <li><strong>ISPs (Internet Service Providers):</strong> Companies that provide internet access</li>
+                <li><strong>Routers:</strong> Devices that forward data packets between networks</li>
+                <li><strong>Switches:</strong> Connect devices within local networks</li>
+                <li><strong>Fiber Optic Cables:</strong> High-speed data transmission lines</li>
+                <li><strong>Data Centers:</strong> Facilities housing servers and networking equipment</li>
+            </ul>
+        </section>
+
+        <section id="ip">
+            <h2>🔢 IP Addresses - How They Work</h2>
+            <h3>What is an IP Address?</h3>
+            <p>An IP (Internet Protocol) address is a unique identifier assigned to every device connected to the internet. It's like a postal address for your computer.</p>
+
+            <h3>Types of IP Addresses</h3>
+            <ul>
+                <li><strong>IPv4:</strong> 32-bit addresses (e.g., 192.168.1.1)</li>
+                <li><strong>IPv6:</strong> 128-bit addresses (e.g., 2001:0db8:85a3::8a2e:0370:7334)</li>
+            </ul>
+
+            <h3>How IP Addresses are Assigned</h3>
+            <ol>
+                <li><strong>Static IP:</strong> Manually assigned and doesn't change</li>
+                <li><strong>Dynamic IP:</strong> Automatically assigned by DHCP server</li>
+                <li><strong>Public IP:</strong> Visible on the internet (assigned by ISP)</li>
+                <li><strong>Private IP:</strong> Used within local networks (192.168.x.x, 10.x.x.x)</li>
+            </ol>
+
+            <h3>IP Address Classes</h3>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Range</th>
+                        <th>Subnet Mask</th>
+                        <th>Use Case</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Class A</td>
+                        <td>1.0.0.0 - 126.255.255.255</td>
+                        <td>255.0.0.0</td>
+                        <td>Large organizations</td>
+                    </tr>
+                    <tr>
+                        <td>Class B</td>
+                        <td>128.0.0.0 - 191.255.255.255</td>
+                        <td>255.255.0.0</td>
+                        <td>Medium organizations</td>
+                    </tr>
+                    <tr>
+                        <td>Class C</td>
+                        <td>192.0.0.0 - 223.255.255.255</td>
+                        <td>255.255.255.0</td>
+                        <td>Small networks</td>
+                    </tr>
+                    <tr>
+                        <td>Private</td>
+                        <td>10.0.0.0 - 10.255.255.255</td>
+                        <td>255.0.0.0</td>
+                        <td>Local networks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="dns">
+            <h2>🌍 DNS (Domain Name System) - How It Works</h2>
+            <h3>What is DNS?</h3>
+            <p>DNS is like a phone book for the internet. It translates human-readable domain names (like google.com) into IP addresses (like 142.250.191.14) that computers use to communicate.</p>
+
+            <h3>Why Do We Need DNS?</h3>
+            <ul>
+                <li>Humans remember names better than numbers</li>
+                <li>IP addresses can change, but domain names stay the same</li>
+                <li>Load balancing across multiple servers</li>
+                <li>Security and content filtering</li>
+            </ul>
+
+            <h3>How DNS Resolution Works</h3>
+            <ol>
+                <li><strong>User types URL:</strong> User enters "www.example.com" in browser</li>
+                <li><strong>Local DNS Cache:</strong> Check if IP is cached locally</li>
+                <li><strong>Recursive DNS Server:</strong> ISP's DNS server searches for the IP</li>
+                <li><strong>Root Name Server:</strong> Points to .com domain server</li>
+                <li><strong>TLD Server:</strong> .com server points to example.com server</li>
+                <li><strong>Authoritative Server:</strong> example.com server returns the IP address</li>
+                <li><strong>Response:</strong> IP address is returned to user's browser</li>
+            </ol>
+
+            <h3>DNS Record Types</h3>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Record Type</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>Maps domain to IPv4 address</td>
+                        <td>example.com → 192.168.1.1</td>
+                    </tr>
+                    <tr>
+                        <td>AAAA</td>
+                        <td>Maps domain to IPv6 address</td>
+                        <td>example.com → 2001:db8::1</td>
+                    </tr>
+                    <tr>
+                        <td>CNAME</td>
+                        <td>Maps domain to another domain</td>
+                        <td>www.example.com → example.com</td>
+                    </tr>
+                    <tr>
+                        <td>MX</td>
+                        <td>Mail exchange server</td>
+                        <td>mail.example.com</td>
+                    </tr>
+                    <tr>
+                        <td>NS</td>
+                        <td>Name server for domain</td>
+                        <td>ns1.example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>DNS Hierarchy</h3>
+            <ul>
+                <li><strong>Root Servers:</strong> 13 root servers worldwide (a.root-servers.net to m.root-servers.net)</li>
+                <li><strong>TLD Servers:</strong> Top-level domain servers (.com, .org, .net, etc.)</li>
+                <li><strong>Authoritative Servers:</strong> Servers that have the actual DNS records</li>
+                <li><strong>Recursive Resolvers:</strong> ISP servers that do the DNS lookup work</li>
+            </ul>
+        </section>
+
+        <section id="com">
+            <h2>🔗 Internet Communication Flow</h2>
+            <h3>Step-by-Step Process</h3>
+            <ol>
+                <li><strong>User Action:</strong> User types "https://www.google.com" in browser</li>
+                <li><strong>DNS Lookup:</strong> Browser queries DNS to get Google's IP address</li>
+                <li><strong>TCP Connection:</strong> Browser establishes TCP connection with Google's server</li>
+                <li><strong>HTTP Request:</strong> Browser sends HTTP GET request</li>
+                <li><strong>Server Processing:</strong> Google's server processes the request</li>
+                <li><strong>HTTP Response:</strong> Server sends back HTML, CSS, JS files</li>
+                <li><strong>Rendering:</strong> Browser renders the webpage</li>
+            </ol>
+
+            <h3>Protocols in Action</h3>
+            <ul>
+                <li><strong>HTTP/HTTPS:</strong> Application layer protocol for web communication</li>
+                <li><strong>TCP:</strong> Transport layer protocol ensuring reliable delivery</li>
+                <li><strong>IP:</strong> Network layer protocol for addressing and routing</li>
+                <li><strong>Ethernet/WiFi:</strong> Physical layer protocols for data transmission</li>
+            </ul>
+        </section>
+        <section id="lec">
+    <h2>📚 Learn from Rohit Bhaiya</h2>
+    <table border="5" cellpadding="5" cellspacing="0">
+        <tr>
+            <td> 
+                    <a href="https://youtu.be/1pcikNlDB-4?si=KOMH36OQrkoBcUvZ" target="_blank">
+                        <img src="https://i.ytimg.com/vi/1pcikNlDB-4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDAATuEwbZx6UA3RGd5enQUg3zllg" width="400">
+                    </a>
+                </td>
+        </tr>
+    </table>
+</section>
+
+        
+
+        <section id="res">
+            <h2>🔗 Essential Learning Resources</h2>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Resource</th>
+                        <th>Type</th>
+                        <th>Difficulty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTTP Basics</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" target="_blank">MDN HTTP Guide</a></td>
+                        <td>Documentation</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>REST APIs</td>
+                        <td><a href="https://restfulapi.net/" target="_blank">REST API Tutorial</a></td>
+                        <td>Tutorial</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>AJAX</td>
+                        <td><a href="https://www.w3schools.com/js/js_ajax_intro.asp" target="_blank">W3Schools AJAX</a></td>
+                        <td>Tutorial</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>Fetch API</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">MDN Fetch API</a></td>
+                        <td>Documentation</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>WebSockets</td>
+                        <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank">MDN WebSockets</a></td>
+                        <td>Documentation</td>
+                        <td>Advanced</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- ...existing code... -->
+
+<!-- ...existing code... -->
+
+
+
+<!-- ...existing code... -->
+
+<!-- ...existing code... -->
+        <!-- Add this section for YouTube video thumbnails -->
+
+
+<section>
+    <h2>🎥 Recommended YouTube Videos</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Watch</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>How the Internet Works</td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=7_LPdttKXPc?autoplay=1" target="_blank">
+                        <img src="https://img.youtube.com/vi/7_LPdttKXPc/0.jpg" alt="How the Internet Works" width="200">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>IP Address Explained</td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=8EV8kS8rhe4?autoplay=1" target="_blank">
+                        <img src="https://img.youtube.com/vi/8EV8kS8rhe4/0.jpg" alt="IP Address Explained" width="200">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>DNS Explained</td>
+                <td>
+                    <a href="https://www.youtube.com/watch?v=72snZctFFtA?autoplay=1" target="_blank">
+                        <img src="https://img.youtube.com/vi/72snZctFFtA/0.jpg" alt="DNS Explained" width="200">
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+        
+        
+
+        <section>
+            <h2>➡️ Next Steps</h2>
+            
+            <ul>
+                <li><a href="frontend.html">Frontend Development</a> - Learn React.js and modern JavaScript</li>
+                <li><a href="backend.html">Backend Development</a> - Master Node.js and Express.js</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        
+    <marquee behavior="scroll" direction="left" scrollamount="6" loop="infinite">
+      &copy; <b>2025 — Made with ❤️ by Suvajit</b>
+  </marquee>
+  
+  </footer>
+</body>
+</html>
